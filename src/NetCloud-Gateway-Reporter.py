@@ -7,12 +7,12 @@ import requests
 
 # Module information.
 __author__ = 'Anthony Farina'
-__copyright__ = 'Copyright (C) 2022 CC Digital Innovation'
+__copyright__ = 'Copyright (C) 2022 Computacenter Digital Innovation'
 __credits__ = ['Anthony Farina']
 __maintainer__ = 'Anthony Farina'
 __email__ = 'farinaanthony96@gmail.com'
 __license__ = 'MIT'
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 __status__ = 'Released'
 
 
@@ -132,7 +132,7 @@ def netcloud_gateway_reporter() -> None:
     # Excel sheet.
     output_df = pd.DataFrame(output_list, columns=COL_LABELS)
     output_df = output_df.sort_values(by=['Router Name'])
-    output_df.to_excel(EXCEL_FILE_NAME + '.xlsx', index=None, header=True)
+    output_df.to_excel(EXCEL_FILE_NAME + '.xlsx', index=False, header=True)
 
 
 # The main method that runs the script. There are no input parameters.
